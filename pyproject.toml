@@ -8,3 +8,6 @@ dependencies = [
     "fastapi[standard]>=0.139.0",
     "returns[compatible-mypy]>=0.28.0",
 ]
+
+[tool.mypy]
+plugins = ["returns.contrib.mypy.returns_plugin"]
