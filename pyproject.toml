@@ -6,6 +6,5 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "fastapi[standard]>=0.139.0",
-    "mypy>=2.1.0",
-    "returns>=0.28.0",
+    "returns[compatible-mypy]>=0.28.0",
 ]

@@ -213,15 +213,13 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
-    { name = "mypy" },
-    { name = "returns" },
+    { name = "returns", extra = ["compatible-mypy"] },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "fastapi", extras = ["standard"], specifier = ">=0.139.0" },
-    { name = "mypy", specifier = ">=2.1.0" },
-    { name = "returns", specifier = ">=0.28.0" },
+    { name = "returns", extras = ["compatible-mypy"], specifier = ">=0.28.0" },
 ]
 
 [[package]]
@@ -629,6 +627,11 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/db/8a/9f6285f3a195ef4cb400c60e10952b25f19c513f44ef739a959c403087a8/returns-0.28.0.tar.gz", hash = "sha256:0eb059d81bfd8af64c86d9286cdf19c280f5a815ee719ff838a9c20b29ce4f84", size = 105269, upload-time = "2026-06-04T09:07:26.371Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/47/15/7da7c0efa3ecfb2b69ef2283e17b93330109d618afe5c788b9bc81807da4/returns-0.28.0-py3-none-any.whl", hash = "sha256:2d7e28070c3fe34d1b6f6be5598b85da83b1c8ed4e567899351dcdb7e9b74a7c", size = 160134, upload-time = "2026-06-04T09:07:27.616Z" },
+]
+
+[package.optional-dependencies]
+compatible-mypy = [
+    { name = "mypy" },
 ]
 
 [[package]]
